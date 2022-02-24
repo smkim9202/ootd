@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}비밀번호 찾기{% endblock %}</title>
+        <link rel="stylesheet" href="../../static/css/main.css">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+    </head>
+    <body>
+        <form action="../pwsearch/" method="post" name="f">
+        {% csrf_token %}
+            <h3 id="idsearch-title">비밀번호 찾기</h3>
+            <table id="idsearch-table">
+                <tr><td id="idsearch-comment" colspan="2">아이디와 이메일, 연락처를 입력해주세요.</td></tr>
+                <tr><th>아이디</th><td class="idsearch-info"><input type="text" name="mem_id" placeholder="아이디 입력"></td></tr>
+                <tr><th>이메일</th><td class="idsearch-info"><input type="text" name="email" placeholder="abc@naver.com"></td></tr>
+                <tr><th>연락처</th><td class="idsearch-info"><input type="text" name="tel"  placeholder="'-'제외, 숫자만 입력"></td></tr>
+                <tr></tr>
+                <tr><td colspan="2"><input type="submit" value="비번 찾기" class="w3-button w3-light-grey w3-hover-grey" style="width:100px"></td></tr>
+                <tr></tr>
+            </table>
+        </form>
+    </body>
+</html>
+
+

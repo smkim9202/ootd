@@ -1,0 +1,28 @@
+{% extends "base1.html" %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}OOTD{% endblock %}</title>
+    </head>
+    <body>
+    {% block content %}
+    <div id="map_season">
+      <div id="map-season-title">
+        <p>{{f_name}} <span>&nbsp;{{f_days}}&nbsp;</span></p>
+      </div> {{map_season|safe}} 
+    </div>
+    
+    
+    
+    {% endblock %}
+    </body>
+</html>
+
+
+
+
+
+
+
+

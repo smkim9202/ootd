@@ -1,0 +1,39 @@
+{% extends "base1.html" %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}OOTD HOME{% endblock %}</title>
+    </head>
+    <body>
+    {% block content %}
+
+        <h3 class="home-title">지금은 벚꽃축제기간~</h3>
+        <div id="ootd-search">
+            <span id="mic"><a href="../member/record/" ><i class="fas fa-microphone"></i></a><span>
+            <br>
+            
+            <form action="/member/result/" method="post" name="f">
+            {% csrf_token %}
+            <input type="date" class="ootd-date" name="ootd-date" value="2022-03-01" min="2022-03-01" max="2022-04-30">
+            <select class="ootd-place" name="ootd-place">
+                <option value="seoul" selected>윤종로벚꽃길(서울 영등포구 여의도동)</option>
+                <option value="busan">해운대 달맞이길(부산 해운대구 달맞이길 190)</option>
+                <option value="daegu">수성못(대구 수성구 두산동)</option>
+                <option value="jeju">한라수목원(제주 제주시 수목원길 72)</option>
+                <option value="yeosu">거북선공원(전남 여수시 거북선공원2길 10)</option>
+                <option value="jeonju">전주덕진공원(전북 전주시 덕진구 권삼득로 390 전주덕진공원)</option>
+                <option value="cheongju">무심천(충북 청주시 상당구 남일면 신송리)</option>
+                <option value="daejeon">보문산(대전 중구 대사동)</option>
+                <option value="incheon">인천대공원(인천 남동구 장수동)</option>
+            </select>
+            <input class="ootd-submit" type="submit" value="검색">
+            </form>
+            <p id="home-info">날짜와, 지역을 선택해서 검색해주세요!</p>
+        </div>
+        <br><br>
+
+    {% endblock %}
+    </body>
+</html>
+

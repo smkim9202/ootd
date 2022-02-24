@@ -1,0 +1,519 @@
+/*  /static/css/main.css   */
+@import url("https://fonts.googleapis.com/css?family=Luckiest+Guy");
+@import url("https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css");
+@font-face {
+  src: url("https://www.axis-praxis.org/fonts/webfonts/MetaVariableDemo-Set.woff2")
+    format("woff2");
+  font-family: "Meta";
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face {
+    font-family: 'LeferiPoint-BlackA';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/LeferiPoint-BlackA.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'ONE-Mobile-POP';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/ONE-Mobile-POP.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* 태그 기본 속성 없애기 */
+a {text-decoration : none}
+
+/* 헤더, 풋바 : base1.html */
+#logo{
+  font-family: "Luckiest Guy", cursive;
+  letter-spacing: -2px;
+}
+.logo-span{
+
+  top: 20px;
+  display: inline-block;
+  -webkit-animation: bounce 1s ease infinite alternate;
+  font-size: 80px;
+  font-weight:900;
+  text-shadow: 0 1px 0 #E0E0E0, 0 2px 0 #E0E0E0, 0 3px 0 #E0E0E0, 0 4px 0 #E0E0E0,
+    0 5px 0 #E0E0E0, 0 6px 0 transparent, 0 7px 0 transparent, 0 8px 0 transparent,
+    0 9px 0 transparent, 0 10px 10px rgba(0, 0, 0, 0.4);
+}
+.logo-span:nth-child(2) {
+  -webkit-animation-delay: 0.1s;
+}
+.logo-span:nth-child(3) {
+  -webkit-animation-delay: 0.2s;
+}
+.logo-span:nth-child(4) {
+  -webkit-animation-delay: 0.3s;
+}
+.logo-span:nth-child(5) {
+  -webkit-animation-delay: 0.4s;
+}
+.logo-span:nth-child(6) {
+  -webkit-animation-delay: 0.5s;
+}
+/* ANIMATION */
+@-webkit-keyframes bounce {
+  100% {
+    top: -20px;
+    text-shadow: 0 1px 0 #E0E0E0, 0 2px 0 #E0E0E0, 0 3px 0 #E0E0E0, 0 4px 0 #E0E0E0,
+      0 5px 0 #E0E0E0, 0 6px 0 #E0E0E0, 0 7px 0 #E0E0E0, 0 8px 0 #E0E0E0, 0 9px 0 #E0E0E0,
+      0 50px 25px rgba(0, 0, 0, 0.2);
+  }
+}
+
+
+/* 본문내용 */
+.w3-content{
+  margin:50px auto;
+  text-align: center;
+  width:100%;
+}
+
+
+/* home */
+.home-title{
+  font-size: 2.7rem;
+  font-family: 'ONE-Mobile-POP';
+  color: pink;
+  padding-bottom:5px;
+}
+#ootd-search{
+    height:150px;
+    padding-bottom:10px;
+}
+#home-info{color:#C0C0C0;}
+#ootd-search .ootd-place, #ootd-search .ootd-date, #ootd-search .ootd-search{
+    height:30px;
+    padding:2px;
+}
+
+#mic{
+    margin:auto;
+    width:50px;
+    padding:8px;
+}
+#mic a{
+    font-size:3em;
+    line-height:100px;
+    color:Silver;
+}
+
+
+/* 회원가입, 로그인(member/login, member/agreement, member/join)  css*/
+#user-total{
+    margin: 0 auto;
+    text-align:center;
+}
+#user-total caption{
+    font-family: "Raleway";
+    font-weight:bold;
+    font-size:2em;
+}
+
+#user-total .info{
+    padding:30px 0;
+    font-family:"Raleway";
+    font-weight:bold;
+    font-size:1em;
+}
+
+#user-total .input-mem{   
+    border: 1px solid #c0c0c0;
+    font-size:1em;
+    color:#c0c0c0;
+    padding:10px 0;
+    width:450px;
+    height:40px;
+
+}
+
+.input-mem input{
+    border:none;
+    width:400px;
+
+}
+
+#user-total .radiobax {
+     font-size:1em;
+     width:450px;
+     height:40px;
+     padding:10px 25px;
+     text-align:left;
+     
+}
+
+#user-total .error{
+    font-family: 'LeferiPoint-BlackA'
+    font-size:1em;
+    color:red;
+    height:30px;
+}
+
+#user-total .w3-button {
+    margin:25px 0;
+    font-size:1.2em;
+    font-weight:bold;
+    font-family:"Raleway";
+}
+
+#user-total th{
+    font-size:1em;
+    width:200px;
+    height:40px;
+    
+}
+
+#user-total .w3-card{
+    margin:25px 0;
+}
+
+.loginbutton {
+    background-color: white;
+    font-family: "Raleway";
+    font-weight:bold;
+    font-size:0.8em;
+    color: black;
+    width:100px;
+    border:none;
+
+
+}
+
+.loginbutton:hover {
+    cursor:pointer;
+}
+
+/* 새창 - idsearch, pwsearch, pictureform */
+#idsearch-title, #pic-title{
+    margin:40px 0 0 50px;
+    color:#bcbcbc;
+    font-family: "LeferiPoint-BlackA"
+}
+
+#idsearch-table, #pic-table{
+    margin:10px 0 0 30px;
+    padding:10px 0 0 30px;
+}
+
+#idsearch-comment{
+    color:#bcbcbc;
+    padding: 10px 0 0 0;
+    
+}
+
+#idsearch-table th, .idsearch-info{
+    padding:15px 30px 10px 0;
+    font-weight: normal;
+    text-align: left;
+    
+}
+
+.idsearch-info input{
+    width:220px;
+}
+
+#idsearch-table .w3-button, #pic-table .w3-button{
+    float:right;
+    margin:30px 0;
+    font-size:0.9em;    
+    font-weight:bold;
+    font-family:"Raleway";
+}
+
+/* 마이페이지(member/info,)  css*/
+#mypage-total{
+    width:100%;
+    height:600px;
+    margin:0px auto;
+
+}
+
+#mypage-total_list{
+    width:100%;
+    height:650px;
+    margin:0px auto;
+    overflow-x:hidden;
+    overflow-y:scroll;
+
+}
+#mypage-total h3, #mypage-total_list h3{
+    font-family: "Raleway";
+    font-weight:bold;
+    font-size:2em;
+    text-align:center;
+    padding:0 0 15px 15px;
+    margin: 0px;
+    
+
+}
+#mypage-info{
+    margin:0px;
+    padding: 60px 60px 30px 10px;
+    width:79%;
+    height:500px;
+    float:right;
+    border: 1px solid #e8e8e8;
+    font-family: "Raleway";
+    font-size:1em;
+}
+
+.info #pic{
+    margin:30px;
+    padding:30px;
+
+}
+.info .pictd{
+    width:350px;
+}
+.info th{
+    text-align: left;
+    width:100px;
+}
+
+.picupdate{
+    text-align: left;
+    padding: 0px 0px 0px 43px;
+
+}
+
+.update th, .delete th{
+    text-align: left;
+    width:160px;
+    padding: 0px 0px 0px 60px;
+}
+
+.update input, .delete input{
+    width:300px;
+}
+
+#mypage-info .btn{
+    padding: 0px 40px 0px 0px;
+}
+
+#mypage-info .w3-button {
+    margin:25px 0 0 0;
+    font-size:1.2em;
+    font-weight:bold;
+    font-family:"Raleway";
+}
+
+/* 관리자 마이페이지(member/list, admindelete, clothes/list, clothes/upload, clothes/update, clothes/delete)  css*/
+#userlist {
+    margin:0px;
+    padding: 60px 60px 30px 10px;
+    width:79%;
+    float:right;
+    border: 1px solid #e8e8e8;
+    font-family: "Raleway";
+    font-size:1em;
+    border-collapse: collapse;
+}
+
+#userlist th, #userlist td {
+  text-align: left;
+  padding: 8px;
+}
+
+#userlist tr:nth-child(even){background-color: #f2f2f2}
+
+#userlist th {
+  background-color: #808080;
+  color: white;
+}
+
+/*** 마이페이지 - 메뉴바 ***/
+#mypage-menu{
+    margin:0;
+    padding:0;
+    width:20%;
+    height:300px;
+    border:1px solid #e8e8e8;
+    float:left;
+}
+
+.mypagebutton {
+    background-color: white;
+    font-family: "Raleway";
+    font-weight:bold;
+    font-size:1.2em;
+    color: black;
+    border:none;
+    width:100%;
+    height:100%;
+}
+
+.mypagebutton:hover {
+    background-color: #e7e7e7;
+    cursor:pointer;
+    }
+
+
+/* 축제기간 : season festival */
+#map_season{
+    margin:0 auto;
+    border: 1px solid #e8e8e8;
+    width:100%;
+    height:120%;
+    padding:0 25px 25px 25px;
+}
+#map-season-title{
+    width:100%;
+    height:80px;
+    text-align: center;
+}
+#map-season-title p{
+  font-size: 2.7rem;
+  font-family: 'ONE-Mobile-POP';
+  color: pink;
+  line-height:80px;
+}
+#map-season-title p span{
+    font-size: 1.8rem;
+    font-family: 'ONE-Mobile-POP';
+    color: white;
+    background-color:pink;
+}
+#home-m-search{
+    margin:0 auto;
+    width:50px;
+    height:100px;
+    padding:8px;
+    margin-bottom:50px;
+}
+#home-m-search a{
+    font-size:3em;
+    line-height:100px;
+    color:Silver;
+}
+
+
+
+/* 옷장검색 결과 */
+#map_ootd{
+    border: 1px solid #e8e8e8;
+    width:100%;
+    height:950px;
+    margin-bottom:20px;
+}
+#map-title{
+    width:900px;
+    height:60px;
+    text-align: center;
+}
+
+/*** 옷장검색 - 옷 ***/
+
+#ootd-wrap{
+    width:38%;
+    height:800px;
+    border: 1px solid #FFE2E7;
+    float:left;
+    margin:25px 5px;
+    background-color: #FFE2E7;
+}
+#ootd-title-wrap{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 350px;
+  height: 100px;
+}
+#ootd-title {
+  transition: all 0.5s;
+  -webkit-text-stroke: 0.8px white;
+  font-variation-settings: "wght" 900, "ital" 1;
+  font-size: 2.7rem;
+  text-align: center;
+  color: transparent;
+  font-family: "Meta", sans-serif;
+  text-shadow: 5px 5px 0px #FFA9B8,
+    5px 5px 0px #e601c0,
+    7px 7px 0px #e9019a,
+    8px 8px 0px #f40468,
+    11px 11px 8px #B57790;
+  cursor: pointer;
+}
+#ootd-title:hover {
+  font-variation-settings: "wght" 100, "ital" 0;
+  text-shadow: none;
+}
+
+.clo {text-align: center;}
+.clo > img{
+     width:250px;
+}
+
+/*** 옷장검색 - 그래프 ***/
+#graph-wrap{
+    width:60%;
+    height:800px;
+    margin:25px 0px;
+    float:right;
+    z-index:5;
+}
+#graph-title{
+  width: 100%;
+  height: 60px;
+  text-align: center;
+}
+
+#graph-title p, #map-title p{
+  font-size: 3rem;
+  font-family: 'ONE-Mobile-POP';
+  color: pink;
+  line-height:60px;
+}
+
+#graph-title p span{
+    font-size: 1.8rem;
+    font-family: 'ONE-Mobile-POP';
+    color: white;
+    background-color:pink;
+}
+
+#map-title p span{
+    font-size: 1.8rem;
+    font-family: 'ONE-Mobile-POP';
+    color: white;
+    background-color:pink;
+}
+
+#graph-body{width:100%;}
+
+#graph-img1{
+    width:540px;
+    height:360px;
+}
+#graph-img2{
+    width:580px;
+    height:360px;
+}
+#graph-img1 img{
+    width:540px;
+    height:260px;
+}
+#graph-img2 img{
+    width:580px;
+    height:260px;
+    z-index:-5;
+}
+#graph-img1 p{
+    font-family: 'ONE-Mobile-POP';
+    color:pink;
+    text-align:center;
+    font-size:1.3em;
+}
+#graph-img2 p{
+    font-family: 'ONE-Mobile-POP';
+    color:pink;
+    text-align:center;
+    font-size:1.3em;
+}
+

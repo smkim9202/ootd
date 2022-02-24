@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}아이디 찾기{% endblock %}</title>
+        <link rel="stylesheet" href="../../static/css/main.css">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    </head>
+    <body>
+        <form action="../idsearch/" method="post" name="f">
+        {% csrf_token %}               
+            <h3 id="idsearch-title">아이디 찾기</h3>
+            <table id="idsearch-table">
+                <tr><td id="idsearch-comment" colspan="2">이메일과 전화번호, 생년월일을 입력해주세요.</td></tr>
+                <tr><th>이메일</th><td class="idsearch-info"><input type="text" name="email" placeholder="abc@naver.com"></td></tr>
+                <tr ><th>연락처</th><td class="idsearch-info"><input type="text" name="tel"  placeholder="'-'제외, 숫자만 입력"></td></tr>
+                <tr ><th>생년월일</th><td class="idsearch-info"><input type="date" name="birth"  placeholder="0000-00-00"></td></tr>
+                <tr></tr>
+                <tr><td colspan="2"><input type="submit" value="아이디 찾기" class="w3-button w3-light-grey w3-hover-grey" style="width:100px"></td></tr>
+                <tr></tr>
+            </table>
+        </form>
+    </body>
+</html>

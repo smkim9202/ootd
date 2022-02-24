@@ -1,0 +1,51 @@
+{% extends "base1.html" %}
+<!-- /templates/member/login.html : 로그인화면 : 새창버전-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}로그인{% endblock %}</title>
+
+    </head>
+    <body>
+    {% block content %}
+  
+        <form action="../login/" method="post" name="f">
+        {% csrf_token %}
+        
+        
+            <table id="user-total"><caption>로그인</caption>
+                <tr><td colspan="2" class="info">가입하신 OOTD 아이디와 비밀번호를 입력해주세요.</td></tr>
+                <tr><td colspan="2" class="input-mem"><i class="fa fa-user"></i> <input type="text" name="mem_id" placeholder="아이디"></td></tr>
+                <tr><td colspan="2" class="input-mem"><i class="fa fa-lock"></i> <input type="password" name="pw" placeholder="비밀번호"></td></tr>
+                <tr><td colspan="2" class="error">{{msg}} {{m_msg}}</td></tr>
+                <tr><td colspan="2" ><input type="submit" value="로그인" class="w3-button w3-light-grey w3-hover-grey" style="width:450px"></td></tr>
+                <tr><td colspan="2">
+                   
+                    <input type="button" value="아이디 찾기" onclick="location.href='javascript:win_idsearch()'" class="loginbutton">
+                    &nbsp;&nbsp;|&nbsp;&nbsp;
+                    <input type="button" value="비번 찾기" onclick="location.href='javascript:win_pwsearch()'"   
+                         class="loginbutton">
+                    &nbsp;&nbsp;|&nbsp;&nbsp;
+                    <input type="button" value="회원가입" onclick="location.href='../agreement/'" 
+                        class="loginbutton"></td></tr>
+            </table>
+
+        </form>
+        <!--아이디비번찾기-->
+        
+            <script type="text/javascript">
+                function win_idsearch() {
+                	  var op = "width=500, height=400, left=50,top=150";
+                	  open("../idsearch/","",op);
+                }
+                
+                function win_pwsearch() {
+                	  var op = "width=500, height=400, left=50,top=150";
+                	  open("../pwsearch/","",op);
+                }
+            </script>
+
+    {% endblock %}
+    </body>
+</html>

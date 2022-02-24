@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html><head>
+<meta charset="UTF-8">
+<title>{% block title %}OOTD{% endblock %}</title>
+{% load static %}
+<link href="{% static 'img/logo_icon.ico' %}" rel="shortcut icon" type="image/x-icon">
+<link rel="stylesheet" href="{% static 'css/main.css' %}">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css"
+    integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+
+
+<head>
+<body><div id="container"><!-- 본문 전체 -->
+<!-- Header -->
+  <header class="w3-panel w3-center" style="padding:0px 16px">
+    <h1 id="logo"><a href="http://localhost:8000/">
+      <span class="logo-span" style="color:#FF9999;">O</span>
+      <span class="logo-span" style="color:#FFCC99;">O</span>
+      <span class="logo-span" style="color:#FFFF99;">T</span>
+      <span class="logo-span" style="color:#CCFF99;">D</span></a></h1>
+    <nav class="w3-bar w3-center w3-white w3-pane w3-opacity w3-large">
+      <div class="w3-right w3-hide-small">
+        <a href="/clothes/festival/spring" class="w3-bar-item w3-button ">봄 벚꽃</a>
+        <a href="/clothes/festival/summer" class="w3-bar-item w3-button ">여름 바다</a>
+        <a href="/clothes/festival/fall" class="w3-bar-item w3-button">가을 단풍</a>
+        <a href="/clothes/festival/winter" class="w3-bar-item w3-button">겨울 스키</a>
+        {%if request.session.login %}
+        <a href="/member/logout" class="w3-bar-item w3-button"><i class="fa fa-user"></i> logout</a>
+        <a href="/member/main" class="w3-bar-item w3-button"><i class="fa fa-th"></i> mypage</a>
+        {% else %}
+        <a href="/member/login" class="w3-bar-item w3-button"><i class="fa fa-user"></i> login</a>
+        <a href="/member/agreement" class="w3-bar-item w3-button"><i class="fa fa-th"></i> join</a>
+        {% endif %}
+      </div>
+    <!-- Hide right-floated links on small screens and replace them with a menu icon -->
+    <div class="w3-dropdown-hover w3-hide-large w3-hide-medium"">
+      <button class="w3-button">
+        Menu <i class="fa fa-caret-down"></i></button>    
+        <div class="w3-dropdown-content w3-card-4 w3-bar-block">
+          <a href="/clothes/festival/spring" class="w3-bar-item w3-button">봄 벚꽃</a>
+          <a href="/clothes/festival/summer" class="w3-bar-item w3-button">여름 바다</a>
+          <a href="/clothes/festival/fall" class="w3-bar-item w3-button">가을 단풍</a>
+          <a href="/clothes/festival/winter" class="w3-bar-item w3-button">겨울 스키</a>
+        </div>
+    </div>
+    <div class="w3-dropdown-hover w3-hide-large w3-hide-medium"">
+      <button class="w3-button">
+        User <i class="fa fa-caret-down"></i></button>       
+        <div class="w3-dropdown-content w3-card-4 w3-bar-block">
+        {%if request.session.login %}
+        <a href="/member/logout" class="w3-bar-item w3-button"><i class="fa fa-user"></i> logout</a>
+        <a href="/member/main" class="w3-bar-item w3-button"><i class="fa fa-th"></i> mypage</a>   
+        {% else %}
+        <a href="/member/login" class="w3-bar-item w3-button"><i class="fa fa-user"></i> login</a>
+        <a href="/member/agreement" class="w3-bar-item w3-button"><i class="fa fa-th"></i> join</a>
+        {% endif %}
+        </div>
+    </div>    
+</header>
+
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-content">
+    {% block content %}{% endblock %}
+<!-- End Page Content -->
+</div>
+
+<!-- Footer -->
+<footer class="w3-container w3-center w3-light-grey w3-padding-64 w3-opacity w3-hover-opacity-off">
+  <a href="#" onClick="javascript:window.scrollTo(0,0)" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+  <p>Made by OOTD</a></p>
+</footer>
+</div><!-- id="container"본문 전체 -->
+</body>
+</html>
